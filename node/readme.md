@@ -1,3 +1,5 @@
 ## Backend NODE.js
 
-### Start Server Type (node keystone or nodemon)
+#### To install Dependencies by Typing(npm install)
+
+### To Start Server Type (node keystone.js or nodemon)
