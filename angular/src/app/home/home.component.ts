@@ -11,5 +11,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  myInterval = 1500;
+   activeSlideIndex = 0;
+   
+    slides = [
+      {image: '../../../../assets/images/3.jpg'},
+      {image: '../../../../assets/images/67.jpg'},
+      {image: '../../../../assets/images/78.jpg'}
+    ];
 }

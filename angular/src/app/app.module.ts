@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { AppComponent } from './app.component';
 import { Configuration } from './app.constants';
@@ -9,6 +12,15 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
+
+
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +31,14 @@ import { ContactComponent } from './contact/contact.component';
     ContactComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(
+    appRoutes,
+  // { enableTracing: true },
+  { useHash: true }
+),
+  TooltipModule.forRoot(),
+  CarouselModule.forRoot(),
   ],
   providers: [
     Configuration
