@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+declare var $:any;
 @Component({
   selector: 'app-partner',
   templateUrl: './partner.component.html',

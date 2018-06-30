@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $:any;
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
