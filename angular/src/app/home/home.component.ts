@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
   }
-  myInterval = 1500;
+  myInterval = 2200;
    activeSlideIndex = 0;
 
     slides = [
