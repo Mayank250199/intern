@@ -1,21 +1,80 @@
 <app-nav></app-nav>
-<carousel id="carousel "[interval]="myInterval" [(activeSlide)]="activeSlideIndex" >
+<!-- Header -->
+<!-- <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BR</b></span> <span class="w3-hide-small w3-text-light-grey">Architects</span></h1>
+  </div>
+</header>
+<carousel id="carousel "[interval]="myInterval" class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home" [(activeSlide)]="activeSlideIndex" >
   <slide *ngFor="let slide of slides; let index=index">
-    <img [src]="slide.image" alt="image slide" style="display: block; width: 100%; height:400px;">
+    <img [src]="slide.image" alt="image slide" lass="w3-image" class="responsive" >
 
-    <div class="carousel-caption">
-      <h4>Slide {{index}}</h4>
-      <p>{{slide.text}}</p>
+    <div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BR</b></span> <span class="w3-hide-small w3-text-light-grey">{{slide.text}}</span></h1>
     </div>
   </slide>
 </carousel>
-<br />
-<div class="wrapper">
-  <div class="owl-carousel owl-theme">
-    <div class="item" *ngFor="let slide of slides; let index=index"><br /><img [src]="slide.image" alt="image slide" style="display: block; width: 100%; height:400px;"><br /></div>
+<! One -->
 
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">P S AIR SOLUTIONS</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">P S AIR SOLUTIONS</span><br>
+    <span class="w3-large">H. V. AC., &nbsp; &nbsp;Installation Expert</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+
+  </div>
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<app-about></app-about>
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">THE TEAM</h3>
+  <p class="w3-center w3-large">The ones who runs this company</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class=" w3-margin-bottom owl-carousel owl-theme box" >
+      <div class="w3-card" *ngFor="let slide of slides; let index=index">
+        <img [src]="slide.image" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementumas.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<br />
-</div>
-<h1>HEllo</h1>
+
+
+<app-partner></app-partner>
+<app-contact></app-contact>
+			<!-- <section id="one" class="wrapper style2">
+						<div>
+							<div class="owl-carousel owl-theme box">
+								<div class="content" *ngFor="let slide of slides; let index=index">
+									<header class="align-center">
+                    <img [src]="slide.image" alt="image slide" style="display: block; width: 100%; height:400px;">
+                    <h4>Slide {{index}}</h4>
+                    <p>{{slide.text}}</p>
+									</header>
+									<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+									<footer class="align-center">
+										<a href="#" class="button alt">Learn More</a>
+									</footer>
+								</div>
+							</div>
+						</div>
+			</section> -->
+
 <app-footer></app-footer>

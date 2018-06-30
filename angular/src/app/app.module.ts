@@ -11,11 +11,13 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { PartnerComponent } from './partner/partner.component';
 
 
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     NavComponent,
     FooterComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    PartnerComponent
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,8 @@ export class HomeComponent implements OnInit {
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
-        nav:true,
+        nav:false,
+        dots:false,
         responsive:{
             0:{
                 items:1
@@ -43,4 +44,8 @@ export class HomeComponent implements OnInit {
       {image: '../../../../assets/images/67.jpg'},
       {image: '../../../../assets/images/78.jpg'}
     ];
+
+
+
+  
 }

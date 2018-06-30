@@ -25,9 +25,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              "./assets/js/owl.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
