@@ -15,26 +15,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-  $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:false,
-        dots:false,
-        responsive:{
-            0:{
-                items:1
-            },
-            400:{
-                items:2
-            },
-            500:{
-                items:3
-            }
-        }
-    })
 
-  })
   }
   myInterval = 1500;
    activeSlideIndex = 0;
@@ -46,6 +27,4 @@ export class HomeComponent implements OnInit {
     ];
 
 
-
-  
 }

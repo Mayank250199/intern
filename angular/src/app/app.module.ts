@@ -12,12 +12,12 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PartnerComponent } from './partner/partner.component';
+import { ProductComponent } from './product/product.component';
 
 
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -31,7 +31,8 @@ const appRoutes: Routes = [
     FooterComponent,
     AboutComponent,
     ContactComponent,
-    PartnerComponent
+    PartnerComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
