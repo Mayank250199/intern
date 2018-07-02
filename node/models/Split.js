@@ -5,7 +5,7 @@ var storage = new keystone.Storage({
 	adapter: keystone.Storage.Adapters.FS,
 	fs: {
 		path: 'uploads/split',
-		publicPath: '/uploads/split/',
+		publicPath: '/split/',
 	},
 	schema: {
     originalname: true,

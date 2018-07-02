@@ -13,7 +13,7 @@ var storage = new keystone.Storage({
   adapter:keystone.Storage.Adapters.FS,
 	fs: {
 		path: keystone.expandPath('uploads/client'),
-		publicPath: '/uploads/client/',
+		publicPath: '/client/',
 	},
   schema: {
     originalname: true,

@@ -5,7 +5,7 @@ var storage = new keystone.Storage({
 	adapter: keystone.Storage.Adapters.FS,
 	fs: {
 		path: 'uploads/cassette',
-		publicPath: '/uploads/cassette/',
+		publicPath: '/cassette/',
 	},
 	schema: {
     originalname: true,

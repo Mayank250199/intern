@@ -5,7 +5,7 @@ var storage = new keystone.Storage({
 	adapter: keystone.Storage.Adapters.FS,
 	fs: {
 		path: 'uploads/ductable',
-		publicPath: '/uploads/ductable/',
+		publicPath: '/ductable/',
 	},
 	schema: {
     originalname: true,
