@@ -27,6 +27,7 @@ var apiHandlers10 = require('./api/panel');
 var apiHandlers11 = require('./api/split');
 var apiHandlers12 = require('./api/vrf');
 var apiHandlers13 = require('./api/product');
+var apiHandlers14 = require('./api/slider');
 
 // Setup Route Bindings
 exports = module.exports = function (app) {
@@ -62,5 +63,6 @@ exports = module.exports = function (app) {
  app.get('/api/vrf', apiHandlers12.getvrf);
  app.get('/api/vrfpics', apiHandlers12.getvrfpics);
  app.get('/api/product', apiHandlers13.getproduct);
+  app.get('/api/slider', apiHandlers14.getslider);
 
 };
