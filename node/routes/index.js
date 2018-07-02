@@ -55,7 +55,10 @@ exports = module.exports = function (app) {
   app.get('/api/ductabe', apiHandlers8.getductable);
  app.get('/api/ductablepics', apiHandlers8.getductablepics);
   app.get('/api/package', apiHandlers9.getpackage);
+  app.get('/api/packagepics', apiHandlers9.getpackagepics);
   app.get('/api/panel', apiHandlers10.getpanel);
+  app.get('/api/panelpics', apiHandlers10.getpanelpics);
+ app.get('/api/splitext', apiHandlers11.getsplit);
   app.get('/api/Split',keystone.middleware.cors, apiHandlers11.getsplitpics);
  app.get('/api/vrf', apiHandlers12.getvrf);
  app.get('/api/vrfpics', apiHandlers12.getvrfpics);
