@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { HttpClientModule } from '@angular/common/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { Configuration } from './app.constants';
@@ -14,7 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PartnerComponent } from './partner/partner.component';
 import { ProductComponent } from './product/product.component';
 
-
+import { ProductService } from './providers/product.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -36,8 +38,9 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(
-    appRoutes,
+    appRoutes
   // { enableTracing: true },
   { useHash: true }
 ),
@@ -45,7 +48,9 @@ const appRoutes: Routes = [
   CarouselModule.forRoot(),
   ],
   providers: [
-    Configuration
+    Configuration,
+    ProductService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })

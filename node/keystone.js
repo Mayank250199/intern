@@ -5,11 +5,12 @@ require('dotenv').config();
 // Require keystone
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
-
+var express = require('express');
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
-
+// Add headers
+keystone.set('cors allow origin', true);
 keystone.init({
 	'name': 'P S Air Solutions',
 	'brand': 'P S Air Solutions',

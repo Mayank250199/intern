@@ -17,7 +17,7 @@ var storageslider = new keystone.Storage({
 	adapter: keystone.Storage.Adapters.FS,
 	fs: {
 		path: 'uploads/product/slider',
-		publicPath: '/uploads/product/slider',
+		publicPath: '/product/slider',
 	},
 	schema: {
     originalname: true,
@@ -30,7 +30,6 @@ Product.add({
 	Productname: { type: Types.Text, initial: true, required: true, min: 0, max:30 },
   images:{ type: Types.File, initial: true, required: true, storage: storage },
   description: { type: Types.Text, initial: true, required: true, min: 0, max:100 },
-  sliderimage:{ type: Types.File, initial: true, required: true, storage: storageslider},
 });
 
 

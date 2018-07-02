@@ -3,14 +3,39 @@
   <p class="w3-center w3-large">The Product which we installs</p>
   <div class="w3-row-padding" style="margin-top:64px">
     <div class=" w3-margin-bottom owl-carousel owl-theme box" >
-      <div class="w3-card" *ngFor="let slide of slides; let index=index">
-        <img [src]="slide.image" alt="John" style="width:100%">
+      <div class="w3-card" *ngFor="let product of products;">
+        <img src="http://localhost:3000/{{product.images['url']}}" alt="John" style="width:100%">
         <div class="w3-container">
-          <h3>John Doe</h3>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementumas.</p>
-          <p><button class="w3-button w3-light-grey w3-block">More Images</button></p>
+          <h3>{{product.Productname}}</h3>
+          <p>{{product.description}}</p>
+          <p><button class="w3-button w3-light-grey w3-block" (click)="modal(product.Productname)">More Images</button></p>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body" >
+        <carousel id="carousel "[interval]="myInterval" class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home" [(activeSlide)]="activeSlideIndex" >
+          <slide *ngFor="let slide of modaldata; let index=index">
+            <img src="http://localhost:3000/{{slide.Pics['url']}}" alt="image slide" lass="w3-image" class="responsive figure" >
+          </slide>
+        </carousel>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
   </div>
 </div>
