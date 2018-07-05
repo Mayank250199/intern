@@ -10,6 +10,9 @@ var express = require('express');
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
 // Add headers
+
+keystone.set('cloudinary config', 'cloudinary://api_key:api_secret@cloud_name' );
+
 keystone.set('cors allow origin', true);
 keystone.init({
 	'name': 'P S Air Solutions',
@@ -19,6 +22,7 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': '.hbs',
+	'mongo': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://localhost/psairsolutions',
 
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
