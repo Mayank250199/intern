@@ -24,32 +24,11 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(
   ) {
-   this.owl();
    this.getProduct();
+   this.owl();
     }
 
-owl(){
-  $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:false,
-        dots:false,
-        responsive:{
-            0:{
-                items:1
-            },
-            400:{
-                items:1
-            },
-            500:{
-                items:3
-            }
-        }
-    })
 
-  })
-}
 
   myInterval = 1500;
    activeSlideIndex = 0;
@@ -68,7 +47,7 @@ owl(){
           this.loader=false;
       })
 }
- 
+
 modal(name:any){
   this.http.get(this.serveUrl +name).subscribe(res=>{
       this.modaldata=res;

@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   this.serveUrl=this.con.server;
 }
   ngOnInit() {
+    this.owl;
     this.slider();
   }
   myInterval = 2200;
@@ -31,6 +32,28 @@ export class HomeComponent implements OnInit {
     //   {image: '../../../../assets/images/67.jpg'},
     //   {image: '../../../../assets/images/78.jpg'}
     // ];
+    owl(){
+      $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            dots:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                400:{
+                    items:1
+                },
+                500:{
+                    items:3
+                }
+            }
+        })
+
+      })
+    }
 
     slider(){
       this.hs.getSlider().subscribe(res=>{

@@ -40,29 +40,29 @@ exports = module.exports = function (app) {
 
 	// API Routes
 
-  app.get('/api/marquee', apiHandlers1.getmarquee);
- app.get('/api/about', apiHandlers2.getabout);
-  app.get('/api/getaboutpics', apiHandlers2.getaboutpics);
- app.get('/api/ahutext', apiHandlers3.getahu);
- app.get('/api/AHU', apiHandlers3.getahupics);
- app.get('/api/cassettetext', apiHandlers4.getcassette);
- app.get('/api/Cassette', apiHandlers4.getcassettepics);
-  app.get('/api/chillertext', apiHandlers5.getchiller);
- app.get('/api/Chiller', apiHandlers5.getchillerpics);
-  app.get('/api/client', apiHandlers6.getclient);
-  app.get('/api/ducttext', apiHandlers7.getduct);
- app.get('/api/Duct', apiHandlers7.getductpics);
-  app.get('/api/ductabetext', apiHandlers8.getductable);
- app.get('/api/Ductable', apiHandlers8.getductablepics);
-  app.get('/api/packagetext', apiHandlers9.getpackage);
-  app.get('/api/Package', apiHandlers9.getpackagepics);
-  app.get('/api/paneltext', apiHandlers10.getpanel);
-  app.get('/api/Panel', apiHandlers10.getpanelpics);
- app.get('/api/splitext', apiHandlers11.getsplit);
-  app.get('/api/Split',keystone.middleware.cors, apiHandlers11.getsplitpics);
- app.get('/api/vrftext', apiHandlers12.getvrf);
- app.get('/api/Vrf', apiHandlers12.getvrfpics);
+  app.get('/api/marquee', keystone.middleware.cors,apiHandlers1.getmarquee);
+ app.get('/api/about',keystone.middleware.cors, apiHandlers2.getabout);
+  app.get('/api/getaboutpics',keystone.middleware.cors, apiHandlers2.getaboutpics);
+ app.get('/api/ahutext',keystone.middleware.cors, apiHandlers3.getahu);
+ app.get('/api/AHU',keystone.middleware.cors, apiHandlers3.getahupics);
+ app.get('/api/cassettetext', keystone.middleware.cors, apiHandlers4.getcassette);
+ app.get('/api/Cassette%20AC',keystone.middleware.cors, apiHandlers4.getcassettepics);
+  app.get('/api/chillertext',keystone.middleware.cors, apiHandlers5.getchiller);
+ app.get('/api/Chiller',keystone.middleware.cors, apiHandlers5.getchillerpics);
+  app.get('/api/client',keystone.middleware.cors, apiHandlers6.getclient);
+  app.get('/api/ducttext', keystone.middleware.cors, apiHandlers7.getduct);
+ app.get('/api/Duct',keystone.middleware.cors, apiHandlers7.getductpics);
+  app.get('/api/ductabetext',keystone.middleware.cors, apiHandlers8.getductable);
+ app.get('/api/Ductable',keystone.middleware.cors, apiHandlers8.getductablepics);
+  app.get('/api/packagetext', keystone.middleware.cors, apiHandlers9.getpackage);
+  app.get('/api/Package', keystone.middleware.cors, apiHandlers9.getpackagepics);
+  app.get('/api/paneltext',keystone.middleware.cors, apiHandlers10.getpanel);
+  app.get('/api/Panel',keystone.middleware.cors,  apiHandlers10.getpanelpics);
+ app.get('/api/splitext',keystone.middleware.cors,  apiHandlers11.getsplit);
+  app.get('/api/Split%20AC',keystone.middleware.cors, apiHandlers11.getsplitpics);
+ app.get('/api/vrftext', keystone.middleware.cors, apiHandlers12.getvrf);
+ app.get('/api/Vrf', keystone.middleware.cors, apiHandlers12.getvrfpics);
  app.get('/api/product', keystone.middleware.cors,apiHandlers13.getproduct);
-  app.get('/api/slider', apiHandlers14.getslider);
+  app.get('/api/slider',keystone.middleware.cors, apiHandlers14.getslider);
 
 };
