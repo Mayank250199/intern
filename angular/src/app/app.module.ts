@@ -22,6 +22,7 @@ import { PartnerService } from './providers/partner.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'product', component: ProductComponent },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -42,10 +43,10 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(
-    appRoutes
-  // { enableTracing: true },
-  { useHash: true }
-),
+      appRoutes,
+      // { enableTracing: true },
+      { useHash: true }
+    ),
   TooltipModule.forRoot(),
   CarouselModule.forRoot(),
   ],

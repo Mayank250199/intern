@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Configuration } from '../app.constants';
-import { Observable } from 'rxjs/Rx';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HomeService {
-
+serveUrl:any;
   constructor(
     private http:HttpClient,
     private con:Configuration,

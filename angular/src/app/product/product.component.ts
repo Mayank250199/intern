@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Configuration } from '../app.constants';
-import { HttpClient } from '@angular/common/http';
 import {  ProductService } from "../providers/product.service";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
@@ -26,49 +25,37 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(
   ) {
-    this.owl();
-   this.getProduct();
+    this.getProduct();
 
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          nav:false,
+          dots:false,
+          responsive:{
+              0:{
+                  items:1
+              },
+              400:{
+                  items:1
+              },
+              500:{
+                  items:3
+              }
+          }
+      })
+
+    })
     }
 
-owl(){
-  $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:false,
-        dots:false,
-        responsive:{
-            0:{
-                items:1
-            },
-            400:{
-                items:1
-            },
-            500:{
-                items:3
-            }
-        }
-    })
-
-  })
-}
-
-  myInterval = 1500;
-   activeSlideIndex = 0;
-
-    slides = [
-      {image: '../../../../assets/images/3.jpg'},
-      {image: '../../../../assets/images/67.jpg'},
-      {image: '../../../../assets/images/78.jpg'}
-    ];
 
     getProduct(){
       this.ps.getProducts().subscribe(res=>{
           this.products=res;
           console.log(this.products)
       },err=>{
-          this.loader=false;
+
       })
 }
 
@@ -78,7 +65,7 @@ modal(name:any){
       console.log(this.modaldata)
       $('#myModal').modal('show');
   },err=>{
-      this.loader=false;
+
   })
 }
 

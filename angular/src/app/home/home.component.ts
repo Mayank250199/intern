@@ -13,6 +13,7 @@ declare var $:any;
 })
 export class HomeComponent implements OnInit {
   Slides:any;
+  serveUrl:any;
   constructor(
   private http:HttpClient,
   private con:Configuration,
@@ -21,45 +22,41 @@ export class HomeComponent implements OnInit {
   this.serveUrl=this.con.server;
 }
   ngOnInit() {
-    this.owl();
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          nav:false,
+          dots:false,
+          responsive:{
+              0:{
+                  items:1
+              },
+              400:{
+                  items:1
+              },
+              500:{
+                  items:3
+              }
+          }
+      })
+
+    })
     this.slider();
   }
   // myInterval = 2200;
   //  activeSlideIndex = 0;
-    //
+
     // slides = [
     //   {image: '../../../../assets/images/3.jpg'},
     //   {image: '../../../../assets/images/67.jpg'},
     //   {image: '../../../../assets/images/78.jpg'}
     // ];
-    owl(){
-      $(document).ready(function(){
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:false,
-            dots:false,
-            responsive:{
-                0:{
-                    items:1
-                },
-                400:{
-                    items:1
-                },
-                500:{
-                    items:3
-                }
-            }
-        })
-
-      })
-    }
-
     slider(){
       this.hs.getSlider().subscribe(res=>{
           this.Slides=res;
         },err=>{
-          this.loader=false;
+
       })
     }
 

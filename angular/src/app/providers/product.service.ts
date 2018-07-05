@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Configuration } from '../app.constants';
-import { Observable } from 'rxjs/Rx';
 
 
 @Injectable()
 export class ProductService {
-
+serveUrl:any;
   constructor(
     private http:HttpClient,
     private con:Configuration,

@@ -4,7 +4,7 @@
   <div class="w3-row-padding" style="margin-top:64px">
     <div class=" w3-margin-bottom owl-carousel owl-theme box" >
       <div class="w3-card" *ngFor="let product of products;">
-        <img src="{{product.images['url']}}" alt="John" style="width:100%" />
+        <img [src]="product.images['url']" alt="John" style="width:100%" />
         <div class="w3-container">
           <h3>{{product.Productname}}</h3>
           <p>{{product.description}}</p>

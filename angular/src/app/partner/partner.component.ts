@@ -6,6 +6,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
 declare var $:any;
+
 @Component({
   selector: 'app-partner',
   templateUrl: './partner.component.html',
@@ -13,6 +14,7 @@ declare var $:any;
 })
 export class PartnerComponent implements OnInit {
 Partners:any;
+serveUrl:any;
   constructor(
     private http:HttpClient,
     private con:Configuration,
@@ -22,16 +24,16 @@ Partners:any;
   }
 
   ngOnInit() {
-    this.owl();
-    this.clients();
 
+    this.clients();
+    this.owl();
   }
 
   clients(){
     this.ps.getClient().subscribe(res=>{
         this.Partners=res;
       },err=>{
-        this.loader=false;
+
     })
   }
 
