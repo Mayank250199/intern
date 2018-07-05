@@ -18,6 +18,7 @@ import { ProductComponent } from './product/product.component';
 
 import { ProductService } from './providers/product.service';
 import { HomeService } from './providers/home.service';
+import { PartnerService } from './providers/partner.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
     Configuration,
     ProductService,
     HomeService,
+    PartnerService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
