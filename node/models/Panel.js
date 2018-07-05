@@ -12,7 +12,7 @@ var storage = new keystone.Storage({
     url: true,
   },
 });
-
+//
 var PanelText = new keystone.List('PanelText');
 
 PanelText.add({
@@ -22,7 +22,7 @@ PanelText.add({
 var PanelPics = new keystone.List('PanelPics');
 
 PanelPics.add({
-	Pics:{ type: Types.File, initial: true, required: true, storage: storage }
+	Pics:{ type: Types.CloudinaryImage, initial: true, required: true}
 });
 
 

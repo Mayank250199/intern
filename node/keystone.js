@@ -11,7 +11,7 @@ var express = require('express');
 // and documentation.
 // Add headers
 
-keystone.set('cloudinary config', 'cloudinary://api_key:api_secret@cloud_name' );
+keystone.set('cloudinary config', 'cloudinary://356738636694133:gLJAj3TEUkc0OK-D0_CWS7Woqbo@rahul252525' );
 
 keystone.set('cors allow origin', true);
 keystone.init({
@@ -59,11 +59,11 @@ keystone.set('nav', {
 	Enquiries_Users: ['enquiries','users'],
 	Marquees_Client : ['marquees','Client'],
 	About : ['AboutText','AboutPics'],
-	Ahu_Cassette  : ['AhuText','AhuPics','CassetteText','CassettePics'],
-	Chiller_Duct : ['ChillerText','ChillerPics','DuctText','DuctPics'],
-	Ductable_Package : ['DuctableText','DuctablePics','PackageText','PackagePics'],
-	Panel_Split : ['PanelText','PanelPics','SplitText','SplitPics'],
-	vrf : ['VrfText','VrfPics'],
+	Ahu_Cassette  : ['AhuPics','CassettePics'],
+	Chiller_Duct : ['ChillerPics','DuctPics'],
+	Ductable_Package : ['DuctablePics','PackagePics'],
+	Panel_Split : ['PanelPics','SplitPics'],
+	vrf : ['VrfPics'],
 });
 
 // Start Keystone to connect to your database and initialise the web server

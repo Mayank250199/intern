@@ -22,7 +22,7 @@ PackageText.add({
 var PackagePics = new keystone.List('PackagePics');
 
 PackagePics.add({
-	Pics:{ type: Types.File, initial: true, required: true, storage: storage }
+	Pics:{ type: Types.CloudinaryImage, initial: true, required: true}
 });
 
 

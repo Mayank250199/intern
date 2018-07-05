@@ -28,7 +28,7 @@ var Product = new keystone.List('Product');
 
 Product.add({
 	Productname: { type: Types.Text, initial: true, required: true, min: 0, max:30 },
-  images:{ type: Types.File, initial: true, required: true, storage: storage },
+  images:{ type: Types.CloudinaryImage, initial: true, required: true},
   description: { type: Types.Text, initial: true, required: true, min: 0, max:100 },
 });
 

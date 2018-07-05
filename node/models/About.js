@@ -22,7 +22,7 @@ AboutText.add({
 var AboutPics = new keystone.List('AboutPics');
 
 AboutPics.add({
-	Pics:{ type: Types.File, initial: true, required: true, storage: storage }
+	Pics:{ type: Types.CloudinaryImage, initial: true, required: true}
 });
 
 

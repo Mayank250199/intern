@@ -22,7 +22,7 @@ DuctableText.add({
 var DuctablePics = new keystone.List('DuctablePics');
 
 DuctablePics.add({
-	Pics:{ type: Types.File, initial: true, required: true, storage: storage }
+	Pics:{ type: Types.CloudinaryImage, initial: true, required: true}
 });
 
 

@@ -22,7 +22,7 @@ CassetteText.add({
 var CassettePics = new keystone.List('CassettePics');
 
 CassettePics.add({
-	Pics:{ type: Types.File, initial: true, required: true, storage: storage }
+	Pics:{ type: Types.CloudinaryImage, initial: true, required: true}
 });
 
 
