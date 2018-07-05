@@ -21,11 +21,11 @@ export class HomeComponent implements OnInit {
   this.serveUrl=this.con.server;
 }
   ngOnInit() {
-    this.owl;
+    this.owl();
     this.slider();
   }
-  myInterval = 2200;
-   activeSlideIndex = 0;
+  // myInterval = 2200;
+  //  activeSlideIndex = 0;
     //
     // slides = [
     //   {image: '../../../../assets/images/3.jpg'},

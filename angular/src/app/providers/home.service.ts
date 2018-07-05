@@ -15,7 +15,7 @@ export class HomeService {
          this.serveUrl=this.con.server;
   }
 
-  getSlider(branch:any){
+  getSlider(){
     return this.http.get(this.serveUrl +'slider')
 }
 }

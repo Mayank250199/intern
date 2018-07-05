@@ -14,7 +14,7 @@ export class ProductService {
          this.serveUrl=this.con.server;
   }
 
-  getProducts(branch:any){
-    return this.http.get(this.serveUrl +'product')
+  getProducts(){
+    return this.http.get(this.serveUrl +'product');
 }
 }

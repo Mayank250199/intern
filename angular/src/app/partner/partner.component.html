@@ -4,7 +4,7 @@
 <h1> Clients</h1>
 <br />
   <div class="w3-quarter owl-carousel owl-theme box">
-      <span  align="center" *ngFor="let slide of slides; let index=index"><img [src]="slide.image" alt="John" style="width:100%;height:10%"></span>
+      <span  align="center" *ngFor="let partner of Partners; let index=index"><img src="{{partner.Pics['url']}}" alt="John" style="width:100%;height:10%"></span>
   </div>
 </div>
 

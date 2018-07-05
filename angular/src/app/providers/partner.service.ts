@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Configuration } from '../app.constants';
 import { Observable } from 'rxjs/Rx';
+import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class PartnerService {
 
   constructor(
@@ -14,8 +13,8 @@ export class PartnerService {
     this.serveUrl=this.con.server;
   }
 
-  getClient(branch:any){
-    return this.http.get(this.serveUrl +'client')
+  getClient(){
+    return this.http.get(this.serveUrl +'client');
 }
 
 }

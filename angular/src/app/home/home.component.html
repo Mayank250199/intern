@@ -1,21 +1,12 @@
 <app-nav></app-nav>
 <carousel id="carousel "[interval]="myInterval" class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home" [(activeSlide)]="activeSlideIndex" >
-  <slide *ngFor="let slide of Slides; let index=index">
+  <slide *ngFor="let slide of Slides;">
     <img src="{{slide.sliderimage['url']}}" alt="image slide" lass="w3-image" class="responsive figure"  />
     <div class="w3-display-middle w3-margin-top w3-center">
       <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>P S AIR SOLUTIONS</b></span> <span class="w3-hide-small w3-text-light-grey">{{slide.text}}</span></h1>
     </div>
   </slide>
 </carousel>
-<!-- <div>
-  <div class="pic-wrapper">
-    <figure class="pic-1"></figure>
-    <figure class="pic-1"></figure>
-    <figure class="pic-1"></figure>
-    <figure class="pic-1"></figure>
-  </div>
-</div> -->
-
 
 
 <app-about></app-about>

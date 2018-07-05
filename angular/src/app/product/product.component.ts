@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Configuration } from '../app.constants';
 import { HttpClient } from '@angular/common/http';
 import {  ProductService } from "../providers/product.service";
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
 
 declare var $:any;
 @Component({
@@ -24,11 +26,33 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(
   ) {
+    this.owl();
    this.getProduct();
-   this.owl();
+
     }
 
+owl(){
+  $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            400:{
+                items:1
+            },
+            500:{
+                items:3
+            }
+        }
+    })
 
+  })
+}
 
   myInterval = 1500;
    activeSlideIndex = 0;
