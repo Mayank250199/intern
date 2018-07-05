@@ -43,7 +43,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
     appRoutes
   // { enableTracing: true },
-  { useHash: true }
+  { useHash: true },
 ),
   TooltipModule.forRoot(),
   CarouselModule.forRoot(),

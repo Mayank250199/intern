@@ -28,7 +28,7 @@
       <div class="modal-body" >
         <carousel id="carousel "[interval]="myInterval" class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home" [(activeSlide)]="activeSlideIndex" >
           <slide *ngFor="let slide of modaldata; let index=index">
-            <img src="http://localhost:3000/{{slide.Pics['url']}}" alt="image slide" lass="w3-image" class="responsive figure" >
+            <img src="{{slide.Pics['url']}}" alt="image slide" lass="w3-image" class="responsive figure" >
           </slide>
         </carousel>
       </div>
