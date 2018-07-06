@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
 <app-nav></app-nav>
 <carousel id="carousel "[interval]="myInterval" class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home" [(activeSlide)]="activeSlideIndex" >
   <slide *ngFor="let slide of Slides;">
@@ -8,6 +9,11 @@
   </slide>
 </carousel>
 
+<!-- <owl-carousel  [options]="{items: 3, dots: false, navigation: false}" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+    <div class="item" *ngFor="let slide of Slides;let i = index">
+        <img src="{{slide.sliderimage['url']}}" alt="image slide" lass="w3-image" class="responsive figure"  />
+    </div>
+</owl-carousel> -->
 
 <app-about></app-about>
 
@@ -18,3 +24,28 @@
 <app-contact></app-contact>
 
 <app-footer></app-footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:false,
+      dots:false,
+      responsive:{
+          0:{
+              items:1
+          },
+          400:{
+              items:1
+          },
+          500:{
+              items:3
+          }
+      }
+  })
+
+})
+
+</script>

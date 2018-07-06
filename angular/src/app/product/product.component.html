@@ -1,10 +1,17 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
 <div class="w3-container" style="padding:128px 16px" id="product">
   <h3 class="w3-center">Products</h3>
   <p class="w3-center w3-large">The Product which we installs</p>
   <div class="w3-row-padding" style="margin-top:64px">
-    <div class=" w3-margin-bottom owl-carousel owl-theme box" >
+    <div class=" w3-margin-bottom owl-carousel owl-theme box" *ngIf="products">
+      <!-- <div class="w3-card" *ngFor="let slide of slides;">
+        <img src="{{slide.image}}" alt="John" style="width:100%" />
+        <div class="w3-container">
+          <p><button class="w3-button w3-light-grey w3-block" (click)="modal(product.Productname)">More Images</button></p>
+        </div>
+      </div> -->
       <div class="w3-card" *ngFor="let product of products;">
-        <img [src]="product.images['url']" alt="John" style="width:100%" />
+        <img src="{{product.images['url']}}" alt="John" style="width:100%" />
         <div class="w3-container">
           <h3>{{product.Productname}}</h3>
           <p>{{product.description}}</p>
@@ -39,3 +46,28 @@
 
   </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:false,
+      dots:false,
+      responsive:{
+          0:{
+              items:1
+          },
+          400:{
+              items:1
+          },
+          500:{
+              items:3
+          }
+      }
+  })
+
+})
+
+</script>

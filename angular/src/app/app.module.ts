@@ -5,6 +5,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HttpClientModule } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { OwlModule } from 'ngx-owl-carousel';
 
 import { AppComponent } from './app.component';
 import { Configuration } from './app.constants';
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    OwlModule,
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,

@@ -20,45 +20,47 @@ serveUrl:any;
     private con:Configuration,
     public ps:PartnerService,
   ) {
-    this.serveUrl=this.con.server;
+
   }
 
   ngOnInit() {
 
+
     this.clients();
-    this.owl();
+
   }
+
+
+
 
   clients(){
     this.ps.getClient().subscribe(res=>{
         this.Partners=res;
+        if(this.Partners){
+          $('.owl-carousel').owlCarousel({
+              loop:true,
+              margin:10,
+              nav:false,
+              dots:false,
+              responsive:{
+                  0:{
+                      items:1
+                  },
+                  600:{
+                      items:3
+                  },
+                  1000:{
+                      items:5
+                  }
+              }
+          })
+        }
       },err=>{
 
     })
   }
 
-  owl(){
-    $(document).ready(function(){
-      $('.owl-carousel').owlCarousel({
-          loop:true,
-          margin:10,
-          nav:false,
-          dots:false,
-          responsive:{
-              0:{
-                  items:1
-              },
-              400:{
-                  items:2
-              },
-              500:{
-                  items:4
-              }
-          }
-      })
 
-    })
-  }
 
 
   // slides = [

@@ -20,45 +20,60 @@ export class ProductComponent implements OnInit {
     private con:Configuration,
     public ps:ProductService,
   ) {
-    this.serveUrl=this.con.server;
+
   }
 
-  ngOnInit(
-  ) {
-    this.getProduct();
+  ngOnInit() {
 
-    $(document).ready(function(){
-      $('.owl-carousel').owlCarousel({
-          loop:true,
-          margin:10,
-          nav:false,
-          dots:false,
-          responsive:{
-              0:{
-                  items:1
-              },
-              400:{
-                  items:1
-              },
-              500:{
-                  items:3
-              }
-          }
-      })
-
-    })
+    this.owl();
     }
 
+  slides = [
+  {image: '../../../../assets/images/3.jpg'},
+  {image: '../../../../assets/images/67.jpg'},
+  {image: '../../../../assets/images/78.jpg'}
+];
 
-    getProduct(){
-      this.ps.getProducts().subscribe(res=>{
-          this.products=res;
-          console.log(this.products)
-      },err=>{
+owl(){
 
-      })
+  this.ps.getProducts().subscribe(res=>{
+      this.products=res;
+      console.log("test")
+      if(this.products){
+        $(document).ready(function(){
+          console.log("hello")
+          $('.owl-carousel').owlCarousel({
+              loop:true,
+              margin:10,
+              nav:false,
+              dots:false,
+              responsive:{
+                  0:{
+                      items:1
+                  },
+                  400:{
+                      items:1
+                  },
+                  500:{
+                      items:2
+                  },
+                  1000:{
+                      items:3
+                  },
+                  1400:{
+                      items:3
+                  },
+
+              }
+          })
+
+        })
+      }
+  },err=>{
+
+  })
+
 }
-
 modal(name:any){
   this.http.get(this.serveUrl +name).subscribe(res=>{
       this.modaldata=res;
@@ -68,6 +83,5 @@ modal(name:any){
 
   })
 }
-
 
 }
