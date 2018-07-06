@@ -4,6 +4,7 @@ import { Configuration } from '../app.constants';
 import {  ProductService } from "../providers/product.service";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
+import * as $ from 'jquery';
 
 declare var $:any;
 @Component({
@@ -20,7 +21,7 @@ export class ProductComponent implements OnInit {
     private con:Configuration,
     public ps:ProductService,
   ) {
-
+          this.serveUrl=this.con.server;
   }
 
   ngOnInit() {
@@ -38,10 +39,8 @@ owl(){
 
   this.ps.getProducts().subscribe(res=>{
       this.products=res;
-      console.log("test")
       if(this.products){
         $(document).ready(function(){
-          console.log("hello")
           $('.owl-carousel').owlCarousel({
               loop:true,
               margin:10,
@@ -79,7 +78,7 @@ modal(name:any){
       this.modaldata=res;
       console.log(this.modaldata)
       $('#myModal').modal('show');
-  },err=>{
+},err=>{
 
   })
 }
