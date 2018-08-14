@@ -16,5 +16,11 @@ serveUrl:any;
 
   getSlider(){
     return this.http.get(this.serveUrl +'slider')
-}
+  }
+
+  getmarquee(){
+    return this.http.get(this.serveUrl +'marquee')
+  }
+
+
 }

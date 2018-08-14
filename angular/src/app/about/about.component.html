@@ -1,5 +1,5 @@
+<!-- 
 
-<!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
   <h3 class="w3-center">ABOUT THE COMPANY</h3>
   <p class="w3-center w3-large">Key features of our company</p>
@@ -26,16 +26,58 @@
     </div>
   </div>
 </div>
-<!-- Promo Section - "We know design" -->
+
 <div class="w3-container w3-light-grey" style="padding:128px 16px">
   <div class="w3-row-padding">
     <div class="w3-col m6">
       <h3>We know design.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+      <div *ngFor="let about of aboutText;">
+      <p >{{about.Abouttext}}</p>
     </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="../../../../assets/images/3.jpg" alt="Buildings" width="700" height="394">
+    </div>
+    <div class="w3-col m6" *ngFor="let about of aboutPics;">
+      <img class="w3-image w3-round-large" src="{{about.Pics['url']}}" alt="Buildings" width="700" height="394">
     </div>
   </div>
+</div>
+ -->
+ <div class="wrapper row2" id="about">
+  <section class="hoc container clear"> 
+    <article class="one_third first"  *ngFor="let about of aboutText;">
+      <h6 class="heading">About the Company</h6>
+      <p class="btmspace-30">{{about.Abouttext}}</p>
+       <ul class="faico clear">
+        <li><a class="faicon-dribble" href="#"><i class="fab fa-dribbble"></i></a></li>
+        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+      </ul>
+    </article>
+    <figure class="two_third" *ngFor="let about of aboutPics;"><a class="imgover" href="#"><img src="{{about.Pics['url']}}" width="700px" height="400px"alt=""></a></figure>
+  </section>
+</div>
+<div class="wrapper row3">
+  <main class="hoc container clear"*ngFor="let work of works;" > 
+    <div class="sectiontitle">
+      <h6 class="heading">What We Do</h6>
+    </div>
+    <div class="group center btmspace-80">
+      <article class="one_third first"><a class="ringcon btmspace-50" href="#"><i class="fas fa-cog"></i></a>
+        <h6 class="heading">Installation</h6>
+        <p>{{work.Installation}}</p>
+      </article>
+      <article class="one_third"><a class="ringcon btmspace-50" href="#"><i class="fas fa-briefcase"></i></a>
+        <h6 class="heading">Service</h6>
+        <p>{{work.Service}}</p>
+      </article>
+      <article class="one_third"><a class="ringcon btmspace-50" href="#"><i class="fas fa-truck"></i></a>
+        <h6 class="heading">Supply</h6>
+        <p>{{work.Supply}}</p>
+      </article>
+    </div>
+
+ <div class="clear"></div>
+  </main>
 </div>

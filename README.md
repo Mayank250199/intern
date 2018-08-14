@@ -7,7 +7,7 @@
 ##### M: Mongo (for Database)<br>
 ##### E: Express (servering Files)<br>
 ##### A: Angular 6<br>
-##### N: Node(for Bakend)
+##### N: Node(for Backend)
  
 ## For Admin Panel
 

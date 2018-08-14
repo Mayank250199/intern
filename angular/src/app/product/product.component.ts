@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Configuration } from '../app.constants';
 import {  ProductService } from "../providers/product.service";
@@ -12,7 +12,7 @@ declare var $:any;
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent implements AfterViewInit {
   serveUrl:any;
   products:any;
   modaldata:any;
@@ -24,7 +24,7 @@ export class ProductComponent implements OnInit {
           this.serveUrl=this.con.server;
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
 
     this.owl();
     }
@@ -47,23 +47,22 @@ owl(){
               nav:false,
               dots:false,
               responsive:{
-                  0:{
-                      items:1
-                  },
-                  400:{
-                      items:1
-                  },
-                  500:{
-                      items:2
-                  },
-                  1000:{
-                      items:3
-                  },
-                  1400:{
-                      items:3
-                  },
-
-              }
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        },
+        1100:{
+            items:3
+        },
+        1200:{
+            items:3
+        }
+    }
           })
 
         })
@@ -73,10 +72,12 @@ owl(){
   })
 
 }
+
 modal(name:any){
+name=name.split(' ')[0].toLowerCase();
+console.log(name);
   this.http.get(this.serveUrl +name).subscribe(res=>{
       this.modaldata=res;
-      console.log(this.modaldata)
       $('#myModal').modal('show');
 },err=>{
 
@@ -84,3 +85,4 @@ modal(name:any){
 }
 
 }
+ 

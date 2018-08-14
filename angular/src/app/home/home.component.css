@@ -1,5 +1,31 @@
-
-.responsive {
-    width: 100%;
-    height: auto;
-}
+.container {
+    padding:3px;
+    width:1200px;
+    overflow:hidden;
+  }
+  
+  .marquee{
+    display:block;
+  position:relative;
+  width:1000px;
+  height:20px;
+  animation:scroll 26s linear infinite;
+  padding:3px;
+  }
+  
+  .marquee:hover {
+      animation-play-state: paused
+  }
+  
+  .img1 {
+      margin-top:5px;
+    margin-right:150px;
+    float:left;
+    color:#000080;
+  }
+  
+  /* Make it move */
+  @keyframes scroll{
+  0% {left:800px;}
+  100% {left:-800px;}
+  }

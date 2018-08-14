@@ -1,27 +1,35 @@
-!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide"><b>P S AIR SOLUTIONS</b></a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-building"></i> ABOUT</a>
-      <a href="#product" class="w3-bar-item w3-button"><i class="fa fa-product-hunt" aria-hidden="true"></i> Products</a>
-      <a href="#client" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-user" aria-hidden="true"></i> Clients</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+ <div class="wrapper row0" id="home">
+  <header id="header" class="hoc clear"> 
+    <div id="logo" class="one_third first">
+      <h1><a href="index.html"><span>P </span>S <span>Air </span>Solutions</a></h1>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" (click)="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
+    <div class="two_third">
+      <ul class="nospace clear">
+        <li class="one_third first">
+          <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a call:</strong> +91-9540475132<br><br>+91-8076934195</span></div>
+        </li>
+        <li class="one_third">
+          <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send us a mail:</strong>psairsolutions@gmail.com</span></div>
+        </li>
+       <!--  <li class="one_quarter">
+          <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Mon. - Sat.:</strong> 09.00am - 9.00pm</span></div>
+        </li> -->
+      </ul>
+    </div>
+  </header>
 </div>
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#product" onclick="w3_close()" class="w3-bar-item w3-button">Product</a>
-  <a href="#client" onclick="w3_close()" class="w3-bar-item w3-button">Our Client</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
+<div class="wrapper row1">
+  <section class="hoc clear"> 
+    <nav id="mainav">
+      <ul class="clear" >
+        <li ><a href="#home">Home</a></li>
+            <li ><a href="#about">About</a></li>
+            <li ><a href="#gallery">Gallery</a></li>
+            <li ><a href="#product">Products</a></li>
+            <li ><a href="#client">Clients</a></li>
+            <li ><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </section>
+</div>

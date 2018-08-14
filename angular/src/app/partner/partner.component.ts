@@ -27,7 +27,7 @@ serveUrl:any;
 
 
     this.clients();
-
+    console.log(this.Partners);
   }
 
 
@@ -35,24 +35,32 @@ serveUrl:any;
 
   clients(){
     this.ps.getClient().subscribe(res=>{
+    console.log(res);
         this.Partners=res;
+        
         if(this.Partners){
           $('.owl-carousel').owlCarousel({
               loop:true,
               margin:10,
               nav:false,
               dots:false,
-              responsive:{
-                  0:{
-                      items:1
-                  },
-                  600:{
-                      items:3
-                  },
-                  1000:{
-                      items:5
-                  }
-              }
+               responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        },
+        1100:{
+            items:3
+        },
+        1200:{
+            items:4
+        }
+    }
           })
         }
       },err=>{

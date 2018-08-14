@@ -1,21 +1,41 @@
 
 <app-nav></app-nav>
-<carousel id="carousel "[interval]="myInterval" class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home" [(activeSlide)]="activeSlideIndex" >
-  <slide *ngFor="let slide of Slides;">
-    <img src="{{slide.sliderimage['url']}}" alt="image slide" lass="w3-image" class="responsive figure"  />
-    <div class="w3-display-middle w3-margin-top w3-center">
-      <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>P S AIR SOLUTIONS</b></span> <span class="w3-hide-small w3-text-light-grey">{{slide.text}}</span></h1>
+ 
+<div class="container" *ngIf="marqueeData?.length >0">
+    <div class="marquee">
+      <div class="img1" *ngFor="let marquee of marqueeData;"><h3 style="text-transform: uppercase"><b>{{marquee.marqueetext}}</b></h3></div>  
+      </div>
     </div>
-  </slide>
-</carousel>
+    
+<div class="wrapper bgded overlay"  style="background-image:url('http://res.cloudinary.com/rahul252525/image/upload/v1530812172/dfmeyqvgbrwy9qw5f32j.jpg');">
+  <div id="pageintro" class="hoc clear"> 
+    <article>
+      <h3 class="heading">P S AIR SOLUTIONS</h3>
+      <p>H.V.AC.,Installation Expert</p>
+    </article>
+  </div>
+</div>
 
-<!-- <owl-carousel  [options]="{items: 3, dots: false, navigation: false}" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
-    <div class="item" *ngFor="let slide of Slides;let i = index">
-        <img src="{{slide.sliderimage['url']}}" alt="image slide" lass="w3-image" class="responsive figure"  />
-    </div>
-</owl-carousel> -->
 
 <app-about></app-about>
+
+<h6 style="text-align: center;" id="gallery"><b>Gallery</b></h6>
+
+
+<!--Carousel Wrapper-->
+<mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [type]="'carousel-thumbnails'" [animation]="'fade'">
+  <mdb-carousel-item *ngFor="let slide of Slides;">
+    <div class="view w-100">
+      <img class="d-block w-100" src="{{slide.sliderimage['url']}}" height="500px" alt="Third slide">
+      <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+  </div>
+  <div class="carousel-caption">
+      <h3 class="h3-responsive">{{slide.Slidername}}</h3>
+      <p>{{slide.description}}</p>
+  </div>
+  </mdb-carousel-item>
+</mdb-carousel>
+<!--/.Carousel Wrapper-->
 
 <app-product></app-product>
 

@@ -15,6 +15,8 @@ declare var $:any;
 export class HomeComponent implements OnInit {
   Slides:any;
   serveUrl:any;
+  marqueeData:any;
+
   constructor(
   private http:HttpClient,
   private con:Configuration,
@@ -24,6 +26,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.owl();
     this.slider();
+    this.marquee();
   }
 
   // myInterval = 2200;
@@ -38,6 +41,17 @@ export class HomeComponent implements OnInit {
     slider(){
       this.hs.getSlider().subscribe(res=>{
           this.Slides=res;
+          console.log(this.Slides)
+        },err=>{
+
+      })
+    }
+
+    
+    marquee(){
+      this.hs.getmarquee().subscribe(res=>{
+          this.marqueeData=res;
+          console.log(this.Slides)
         },err=>{
 
       })
