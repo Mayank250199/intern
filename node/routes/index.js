@@ -28,7 +28,7 @@ var apiHandlers12 = require('./api/vrf');
 var apiHandlers13 = require('./api/product');
 var apiHandlers14 = require('./api/slider');
 var apiHandlers15 = require('./api/contact');
-var apiHandlers16 = require('./api/Work');
+var apiHandlers16 = require('./api/work');
 var apiHandlers17 = require('./api/address');
 // Setup Route Bindings
 exports = module.exports = function (app) {
